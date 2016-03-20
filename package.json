@@ -1,7 +1,7 @@
 {
   "name": "angular2-browserify-deps",
   "version": "0.11.0",
-  "description": "Angular 2 dependencies for browserify",
+  "description": "Dependencies set for Angular2 with browserify",
   "main": "index.js",
   "scripts": {
     "typings": "typings install",
