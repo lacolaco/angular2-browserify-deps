@@ -1,5 +1,7 @@
 # angular2-browserify-deps
 
+[![npm version](https://badge.fury.io/js/angular2-browserify-deps.svg)](https://badge.fury.io/js/angular2-browserify-deps)
+
 Dependencies set for Angular2 with Browserify
 
 v0.**11**.x --> For Angular2 Beta.**11**
