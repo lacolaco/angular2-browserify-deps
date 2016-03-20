@@ -1,0 +1,41 @@
+{
+  "name": "angular2-browserify-deps",
+  "version": "0.11.0",
+  "description": "Angular 2 dependencies for browserify",
+  "main": "index.js",
+  "scripts": {
+    "typings": "typings install",
+    "build:test": "browserify -o test/bundle.spec.js -p [tsify] test/index.spec.ts",
+    "pretest": "npm run build:test",
+    "test": "karma start"
+  },
+  "keywords": [
+    "angular2",
+    "browserify"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laco0416/angular2-browserify-deps"
+  },
+  "author": "laco0416 <laco416@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "angular2": "2.0.0-beta.11",
+    "browserify": "^13.0.0",
+    "chai": "^3.5.0",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-mocha": "^0.2.2",
+    "mocha": "^2.4.5",
+    "tsify": "^0.14.1",
+    "typings": "^0.7.9"
+  },
+  "dependencies": {
+    "es6-collections": "^0.5.6",
+    "es6-promise": "3.1.2",
+    "es6-shim": "0.35.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "zone.js": "0.6.4"
+  }
+}
