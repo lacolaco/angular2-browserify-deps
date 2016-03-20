@@ -25,3 +25,5 @@ require("reflect-metadata");
  * RxJS
  */
 require("rxjs/Rx");
+
+module.exports = {};
