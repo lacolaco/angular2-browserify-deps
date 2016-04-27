@@ -6,23 +6,22 @@
  */
 import "../index";
 
-import {ApplicationRef, platform, Component} from "angular2/core";
+import {ApplicationRef, Component, createPlatform, ReflectiveInjector, coreLoadAndBootstrap} from "angular2/core";
 import {TEST_BROWSER_PLATFORM_PROVIDERS, TEST_BROWSER_APPLICATION_PROVIDERS} from "angular2/platform/testing/browser";
 
 import * as chai from "chai";
 const assert = chai.assert;
 
 describe("TestApp", () => {
-    let application: ApplicationRef;
+    let appInjector: ReflectiveInjector;
     beforeEach(() => {
         document.body.innerHTML = "<test-app></test-app>";
-
-        application = platform([TEST_BROWSER_PLATFORM_PROVIDERS])
-            .application([TEST_BROWSER_APPLICATION_PROVIDERS]);
+        let platform = createPlatform(ReflectiveInjector.resolveAndCreate(TEST_BROWSER_PLATFORM_PROVIDERS));
+        appInjector = ReflectiveInjector.resolveAndCreate([TEST_BROWSER_APPLICATION_PROVIDERS], platform.injector);
     });
 
     it("should be able to bootstrap", () => {
-        return application.bootstrap(TestApp, [])
+        return coreLoadAndBootstrap(appInjector, TestApp)
             .then(cmpRef => {
                 console.log("boostrapped!");
                 assert(!!cmpRef);

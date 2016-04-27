@@ -1,7 +1,6 @@
 /**
  * Angular2 Browserify Dependencies
  *
- * For Angular2 Beta.11
  */
 
 /**
