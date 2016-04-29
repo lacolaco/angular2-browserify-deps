@@ -1,6 +1,6 @@
 {
   "name": "angular2-browserify-deps",
-  "version": "0.16.0",
+  "version": "0.17.0",
   "description": "Dependencies set for Angular2 with browserify",
   "main": "index.js",
   "scripts": {
